@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.AppointmentsController">
+    <children>
+        <VBox prefHeight="700.0" prefWidth="1200.0">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1200.0" spacing="40.0">
+                    <children>
+                  <DatePicker fx:id="appointmentDatePicker" onAction="#onActionUpdateAppointmentsView">
+                     <HBox.margin>
+                        <Insets right="250.0" top="60.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                        <Label text="Appointments">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                        </Label>
+                  <RadioButton fx:id="viewAllAppointmentsRBtn" mnemonicParsing="false" onAction="#onActionShowAllAppointments" text="View All Appointments">
+                     <HBox.margin>
+                        <Insets top="60.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="appointmentsViewTG" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="viewByMonthRBtn" mnemonicParsing="false" onAction="#onActionFilterAppointmentsByMonth" text="View By Month" toggleGroup="$appointmentsViewTG">
+                     <HBox.margin>
+                        <Insets top="60.0" />
+                     </HBox.margin></RadioButton>
+                  <RadioButton fx:id="viewByWeekRBtn" mnemonicParsing="false" onAction="#onActionFilterAppointmentsByWeek" text="View By Week" toggleGroup="$appointmentsViewTG">
+                     <HBox.margin>
+                        <Insets top="60.0" />
+                     </HBox.margin></RadioButton>
+                    </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+                </HBox>
+                <HBox prefHeight="500.0" prefWidth="1200.0">
+                    <children>
+                        <TableView fx:id="appointmentsView" prefHeight="500.0" prefWidth="1100.0">
+                            <columns>
+                                <TableColumn fx:id="appointmentIdCol" prefWidth="99.0" text="Appointment ID" />
+                                <TableColumn fx:id="titleCol" prefWidth="107.0" text="Title" />
+                        <TableColumn fx:id="descriptionCol" prefWidth="240.0" text="Description" />
+                        <TableColumn fx:id="locationCol" prefWidth="112.0" text="Location" />
+                        <TableColumn fx:id="contactCol" text="Contact" />
+                        <TableColumn fx:id="typeCol" prefWidth="102.0" text="Type" />
+                        <TableColumn fx:id="startCol" prefWidth="124.0" text="Start Date and Time" />
+                        <TableColumn fx:id="endCol" prefWidth="130.0" text="End Date and Time" />
+                        <TableColumn fx:id="customerIdCol" prefWidth="105.0" text="Customer ID" />
+                            </columns>
+                        </TableView>
+                    </children>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="1200.0" spacing="25.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onActionDisplayMenu" prefHeight="30.0" prefWidth="60.0" text="Menu" />
+                        <Button mnemonicParsing="false" onAction="#onActionExitApplication" prefHeight="30.0" prefWidth="60.0" text="Exit">
+                            <HBox.margin>
+                                <Insets right="600.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#onActionDisplayAddAppointment" prefHeight="30.0" prefWidth="60.0" text="Add" />
+                        <Button mnemonicParsing="false" onAction="#onActionDisplayUpdateAppointment" prefHeight="30.0" prefWidth="60.0" text="Update" />
+                        <Button mnemonicParsing="false" onAction="#onActionDeleteAppointment" prefHeight="30.0" prefWidth="60.0" text="Delete" />
+                    </children>
+                    <padding>
+                        <Insets left="100.0" top="25.0" />
+                    </padding>
+                </HBox>
+            </children></VBox>
+    </children>
+</AnchorPane>

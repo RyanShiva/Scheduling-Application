@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.LoginController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="150.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="titleLbl" text="Scheduling Application Login">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="35.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="usernameLbl" prefWidth="125.0" text="Username:  " />
+                  <TextField fx:id="usernameTxt" />
+               </children>
+               <padding>
+                  <Insets left="150.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="60.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="passwordLbl" prefWidth="125.0" text=" Password:  " />
+                  <TextField fx:id="passwordTxt" />
+               </children>
+               <padding>
+                  <Insets left="150.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="105.0" prefWidth="600.0">
+               <children>
+                  <Button fx:id="signInLbl" mnemonicParsing="false" onAction="#onActionSignIn" prefWidth="110.0" text="Sign In">
+                     <HBox.margin>
+                        <Insets right="15.0" />
+                     </HBox.margin></Button>
+                  <Button fx:id="exitLbl" mnemonicParsing="false" onAction="#onActionExitApplication" prefWidth="80.0" text="Exit" />
+               </children>
+               <padding>
+                  <Insets left="280.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="locationLbl" prefWidth="250.0" text="Time Zone: " />
+               </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.UpdateAppointmentController">
+    <children>
+        <VBox prefHeight="700.0" prefWidth="700.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="700.0">
+                    <children>
+                        <Label text="Update Appointment">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox prefHeight="500.0" prefWidth="700.0">
+                    <children>
+                        <VBox prefHeight="500.0" prefWidth="150.0" />
+                        <VBox prefHeight="500.0" prefWidth="400.0">
+                            <children>
+                                <GridPane alignment="CENTER" prefHeight="500.0" prefWidth="400.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="149.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="367.0" minWidth="10.0" prefWidth="251.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="71.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="154.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="106.0" minHeight="0.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="110.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="98.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="146.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="118.0" minHeight="10.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="Appointment ID" />
+                                        <Label text="Title" GridPane.rowIndex="1" />
+                                        <Label text="Location" GridPane.rowIndex="3" />
+                                        <Label text="Type" GridPane.rowIndex="4" />
+                                        <Label text="Contact" GridPane.rowIndex="5" />
+                                        <TextArea fx:id="descriptionTxt" prefHeight="77.0" prefWidth="267.0" promptText="50 characters maximum" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                        <VBox prefHeight="146.0" prefWidth="103.0" GridPane.rowIndex="2">
+                                            <children>
+                                                <Label alignment="TOP_CENTER" text="Description">
+                                                    <VBox.margin>
+                                                        <Insets />
+                                                    </VBox.margin>
+                                                </Label>
+                                            </children>
+                                        </VBox>
+                                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                            <children>
+                                                <TextField fx:id="titleTxt" prefHeight="25.0" prefWidth="200.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                            <children>
+                                                <TextField fx:id="locationTxt" prefWidth="200.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                            <children>
+                                                <TextField fx:id="appointmentIdTxt" disable="true" prefWidth="200.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                            <children>
+                                                <TextField fx:id="typeTxt" prefWidth="200.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="304.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                            <children>
+                                                <ComboBox fx:id="contactCombo" prefHeight="25.0" prefWidth="250.0" />
+                                            </children>
+                                        </HBox>
+                                        <Label text="Start Date" GridPane.rowIndex="6" />
+                                        <Label text="End Date" GridPane.rowIndex="8" />
+                                        <Label text="Customer ID" GridPane.rowIndex="10" />
+                                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                            <children>
+                                                <DatePicker fx:id="startDatePicker" prefWidth="200.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                            <children>
+                                                <DatePicker fx:id="endDatePicker" prefWidth="200.0" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                                 <children>
+                                    <ComboBox fx:id="customerCombo" prefWidth="250.0" />
+                                 </children>
+                                        </HBox>
+                                        <Label text="Start Time" GridPane.rowIndex="7" />
+                                        <Label text="End Time" GridPane.rowIndex="9" />
+                                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                            <children>
+                                                <TextField fx:id="startHourTxt" prefWidth="50.0" />
+                                                <Label text=":" />
+                                                <TextField fx:id="startMinuteTxt" prefWidth="50.0" />
+                                                <ChoiceBox fx:id="startTimeChoice" prefWidth="50.0">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" />
+                                                    </HBox.margin>
+                                                </ChoiceBox>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                            <children>
+                                                <TextField fx:id="endHourTxt" prefWidth="50.0" />
+                                                <Label text=":" />
+                                                <TextField fx:id="endMinuteTxt" prefWidth="50.0" />
+                                                <ChoiceBox fx:id="endTimeChoice" prefWidth="50.0">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" />
+                                                    </HBox.margin>
+                                                </ChoiceBox>
+                                            </children>
+                                        </HBox>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                                 <children>
+                                    <TextField fx:id="userIDTxt" disable="true" prefWidth="200.0" />
+                                 </children>
+                              </HBox>
+                              <Label text="User ID" GridPane.rowIndex="11" />
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </VBox>
+                        <VBox prefHeight="500.0" prefWidth="150.0" />
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="700.0" spacing="40.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#onActionSaveAppointment" prefHeight="30.0" prefWidth="60.0" text="Save" />
+                        <Button mnemonicParsing="false" onAction="#onActionCancelUpdateAppointment" prefHeight="30.0" prefWidth="60.0" text="Cancel" />
+                    </children>
+                    <padding>
+                        <Insets left="450.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

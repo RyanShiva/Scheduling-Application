@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.CustomersController">
+   <children>
+      <VBox prefHeight="700.0" prefWidth="1200.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="1200.0">
+               <children>
+                  <Label text="Customers">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="500.0" prefWidth="1200.0">
+               <children>
+                  <TableView fx:id="customersView" prefHeight="500.0" prefWidth="1100.0">
+                    <columns>
+                      <TableColumn fx:id="customerIdCol" prefWidth="118.00001525878906" text="Customer ID" />
+                      <TableColumn fx:id="customerNameCol" prefWidth="154.99996948242188" text="Name" />
+                        <TableColumn fx:id="addressCol" prefWidth="246.0" text="Address" />
+                        <TableColumn fx:id="postalCodeCol" prefWidth="85.0" text="Postal Code" />
+                        <TableColumn fx:id="phoneNumberCol" prefWidth="178.0" text="Phone Number" />
+                        <TableColumn fx:id="countryCol" prefWidth="148.0" text="Country" />
+                        <TableColumn fx:id="firstLevelDivisionCol" prefWidth="167.0" text="First-Level Division" />
+                    </columns>
+                  </TableView>
+               </children>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="1200.0" spacing="25.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onActionDisplayMenu" prefHeight="30.0" prefWidth="60.0" text="Menu" />
+                  <Button mnemonicParsing="false" onAction="#onActionExitApplication" prefHeight="30.0" prefWidth="60.0" text="Exit">
+                     <HBox.margin>
+                        <Insets right="600.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onActionAddCustomer" prefHeight="30.0" prefWidth="60.0" text="Add" />
+                  <Button mnemonicParsing="false" onAction="#onActionUpdateCustomer" prefHeight="30.0" prefWidth="60.0" text="Update" />
+                  <Button mnemonicParsing="false" onAction="#onActionDeleteCustomer" prefHeight="30.0" prefWidth="60.0" text="Delete" />
+               </children>
+               <padding>
+                  <Insets left="100.0" top="25.0" />
+               </padding>
+            </HBox>
+         </children></VBox>
+   </children>
+</AnchorPane>

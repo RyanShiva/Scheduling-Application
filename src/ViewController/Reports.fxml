@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.ReportsController">
+   <children>
+      <VBox prefHeight="700.0" prefWidth="1200.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="75.0" prefWidth="1200.0">
+               <children>
+                  <Label text="Reports">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children></HBox>
+            <HBox prefHeight="250.0" prefWidth="1200.0">
+               <children>
+                  <VBox prefHeight="250.0" prefWidth="75.0" />
+                  <VBox prefHeight="250.0" prefWidth="333.0" style="-fx-border-style: solid; -fx-border-radius: 15;">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="333.0">
+                           <children>
+                              <Label text="Number of Appointments by Type">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="200.0" prefWidth="333.0">
+                           <children>
+                              <TableView fx:id="appointmentsByTypeView" prefHeight="185.0" prefWidth="303.0">
+                                <columns>
+                                  <TableColumn fx:id="apptByTypeTypeCol" prefWidth="140.0" text="Type" />
+                                  <TableColumn fx:id="apptByTypeNumApptCol" prefWidth="159.0" text="Number of Appointments" />
+                                </columns>
+                              </TableView>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="250.0" prefWidth="25.0" />
+                  <VBox prefHeight="250.0" prefWidth="334.0" style="-fx-border-style: solid; -fx-border-radius: 15;">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="334.0">
+                           <children>
+                              <Label text="Number of Upcoming Appointments by Month">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="200.0" prefWidth="334.0">
+                           <children>
+                              <TableView fx:id="appointmentsByMonthView" prefHeight="185.0" prefWidth="303.0">
+                                 <columns>
+                                    <TableColumn fx:id="apptByMonthMonthCol" prefWidth="140.0" text="Month" />
+                                    <TableColumn fx:id="apptByMonthNumApptCol" prefWidth="161.0" text="Number of Appointments" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="250.0" prefWidth="25.0" />
+                  <VBox prefHeight="250.0" prefWidth="333.0" style="-fx-border-style: solid; -fx-border-radius: 15;">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="333.0">
+                           <children>
+                              <Label text="Total Appointment Hours for the Next 10 Weeks">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="200.0" prefWidth="333.0">
+                           <children>
+                              <TableView fx:id="appointmentHoursByWeekView" prefHeight="185.0" prefWidth="303.0">
+                                 <columns>
+                                    <TableColumn fx:id="apptHoursByWeekWeekCol" prefWidth="211.0" text="Week" />
+                                    <TableColumn fx:id="apptHoursByWeekHoursCol" prefWidth="88.0" text="Appt. Hours" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="250.0" prefWidth="75.0" />
+               </children></HBox>
+            <HBox prefHeight="25.0" prefWidth="1200.0" />
+            <HBox prefHeight="250.0" prefWidth="1200.0">
+               <children>
+                  <VBox prefHeight="250.0" prefWidth="100.0" />
+                  <VBox prefHeight="250.0" prefWidth="1000.0" style="-fx-border-style: solid; -fx-border-radius: 15;">
+                     <children>
+                        <HBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="1000.0">
+                           <children>
+                              <ComboBox fx:id="contactCombo" onAction="#onActionUpdateContactScheduleView" prefWidth="150.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="50.0" right="240.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <Label text="Contact Schedule">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="200.0" prefWidth="1000.0">
+                           <children>
+                              <TableView fx:id="contactScheduleView" prefHeight="185.0" prefWidth="900.0">
+                                <columns>
+                                  <TableColumn fx:id="contactScheduleApptIDCol" prefWidth="108.0" text="Appointment ID" />
+                                  <TableColumn fx:id="contactScheduleTitleCol" prefWidth="98.0" text="Title" />
+                                    <TableColumn fx:id="contactScheduleDescriptionCol" prefWidth="201.0" text="Description" />
+                                    <TableColumn fx:id="contactScheduleTypeCol" prefWidth="99.0" text="Type" />
+                                    <TableColumn fx:id="contactScheduleStartCol" prefWidth="119.0" text="Start Date and Time" />
+                                    <TableColumn fx:id="contactScheduleEndCol" prefWidth="121.0" text="End Date and Time" />
+                                    <TableColumn fx:id="contactScheduleCustomerIDCol" prefWidth="150.0" text="Customer ID" />
+                                </columns>
+                                 <HBox.margin>
+                                    <Insets bottom="15.0" left="50.0" right="50.0" />
+                                 </HBox.margin>
+                              </TableView>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children></VBox>
+                  <VBox prefHeight="250.0" prefWidth="100.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1200.0" spacing="40.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onActionDisplayMenu" prefHeight="30.0" prefWidth="60.0" text="Menu" />
+                  <Button mnemonicParsing="false" onAction="#onActionExitApplication" prefHeight="30.0" prefWidth="60.0" text="Exit" />
+               </children>
+               <padding>
+                  <Insets left="900.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
