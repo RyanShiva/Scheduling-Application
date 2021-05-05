@@ -5,8 +5,8 @@
 This desktop application allows users to view appointment and customer data. It also generates reports and adds, updates, and deletes customer and appointment data.
 
 ## Author
-Alec R. Shiva
-Contact: ashiva@wgu.edu
+Ryan Shiva
+Contact: ryanshiva2@gmail.com
 
 ## Version
 Scheduling Application 1.01
