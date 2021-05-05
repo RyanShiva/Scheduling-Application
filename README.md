@@ -74,13 +74,17 @@ Note: as long as a date is selected in the datepicker, users may switch between 
 This screen allows the user to view reports on the appointment data in the database.
 
 Number of Appointments by Type:  
+  
 Each type of appointment is listed in the Type column. The table displays the number of appointments in the database that correspond to each type. If a type of appointment does not appear in the table, then there are zero appointments in the database of that type.  
   
 Number of Upcoming Appointments by Month:  
+  
 The months of the year are listed in the Month column. The table displays the number of appointments in each month. This table only displays future appointments, so if an appointment start time has already passed, then it will not be counted in the number of appointments for the month for which it is scheduled (This is to prevent appointments on the same month but different years from being counted). The month count also excludes appointments scheduled for 12 months after the current month and beyond. For example, if the current date is July 16, 2020 then any appointments scheduled for July 2021 or later will not be counted.  
   
 Total Appointment Hours for the Next 10 Weeks:  
+  
 This report satisfies the requirement to include "an additional report of [my] choice that is different from the two other required reports." The Week column displays 10 weeks in chronological order, starting from the week of the current date. Each week starts on Monday and ends on Sunday. The appointment hours are calculated by adding together the length of time of each appointment in the database for each week in the table. The Appt. Hours column displays the total hours and minutes in the format 'hh:mm'.  
   
 Contact Schedule:  
+  
 The contact schedule is blank by default. To generate the schedule for a contact, select a contact in the combo box. All appointments associated with that contact will be displayed in the Contact Schedule table.
